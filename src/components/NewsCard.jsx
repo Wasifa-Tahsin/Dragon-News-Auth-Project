@@ -1,4 +1,5 @@
 import { FaEye, FaStar, FaShareAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
   return (
@@ -40,12 +41,12 @@ const NewsCard = ({ news }) => {
         </p>
 
         {/* Read More */}
-        <a
-          href="#"
+        <Link to={`/news/${news._id}`}
+          
           className="text-blue-600 font-semibold text-sm hover:underline"
         >
           Read More
-        </a>
+        </Link>
 
         {/* Rating and Views */}
         <div className="flex items-center justify-between mt-4">
